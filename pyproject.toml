@@ -104,4 +104,5 @@ addopts = "-v --cov=actxps_py --cov-report=term-missing"
 dev = [
     "pytest>=9.1.0",
     "pytest-cov>=7.1.0",
+    "ruff>=0.15.17",
 ]
