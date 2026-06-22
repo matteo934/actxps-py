@@ -22,8 +22,8 @@ class Policy(BaseModel):
     status: Literal["Active", "Lapsed", "Death"]
     """Status of the policy"""
 
-    @computed_field
     @property
+    @computed_field
     def age(self) -> int:
         if (date.today().month, date.today().day) < (self.birth_date.month, self.birth_date.day):
             return date.today().year - self.birth_date.year - 1
